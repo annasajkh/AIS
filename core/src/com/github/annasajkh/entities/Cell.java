@@ -56,9 +56,9 @@ public class Cell extends Entity
 		}
 		
 		float[] output = brain.process(new float[]{	NeuralNetwork.sigmoid(closestDistance2), 
-													NeuralNetwork.sigmoid(x), 
-													NeuralNetwork.sigmoid(y),
-													NeuralNetwork.sigmoid(velocity.len2())});
+								NeuralNetwork.sigmoid(x), 
+								NeuralNetwork.sigmoid(y),
+								NeuralNetwork.sigmoid(velocity.len2())});
 		
 		angleRad = MathUtils.map(0, 1, -MathUtils.PI2, MathUtils.PI2, output[0]);
 		speed = MathUtils.map(0, 1, minSpeed, maxSpeed, output[1]);
